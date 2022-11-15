@@ -1,0 +1,33 @@
+<form [formGroup]="form" style="display: flex;flex-direction: column;" (ngSubmit)="operar()">
+
+  <mat-form-field appearance="fill">
+    <mat-label>First Name</mat-label>
+    <input matInput placeholder="Ej: Gustavo " formControlName="first_name">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Last Name</mat-label>
+    <input matInput placeholder="Ej: Toledo " formControlName="last_name">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Phone number</mat-label>
+    <input matInput placeholder="Ej: +57 31313113 " formControlName="phone_number" type="number">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Ej: a@a.com " type="email" formControlName="email">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Address</mat-label>
+    <input matInput placeholder="Ej: cll 1 # 1 -1 " formControlName="address" required>
+  </mat-form-field>
+
+  <button mat-flat-button color="primary" type="submit">Create ✍️</button>
+  <br>
+  <button mat-flat-button color="accent" type="button" (click)="close()">Close ❎</button>
+
+</form>
+
